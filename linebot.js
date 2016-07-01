@@ -5,11 +5,11 @@ const toChannel = 1383378250;
 const eventType = '138311608800106203';
 
 function send(data){
-	let to = data.content.from;
-	let contentType = data.content.contentType;
-	let text = data.content.text || '';
+    let to = data.content.from;
+    let contentType = data.content.contentType;
+    let text = data.content.text || '';
 
-	let content;
+    let content;
 
     switch(contentType) {
         case 1:
@@ -62,7 +62,7 @@ function send(data){
             };
     }
 
-	let body = {
+    let body = {
         to: [to],
         toChannel: toChannel,
         eventType: eventType,
@@ -106,5 +106,5 @@ function callback(req, res, next){
 }
 
 module.exports = {
-	callback: callback
+    callback: callback
 };
